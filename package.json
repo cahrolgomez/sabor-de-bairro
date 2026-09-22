@@ -2,7 +2,6 @@
   "name": "sabor-do-bairro",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://cahrolgomez.github.io/sabor-de-bairro",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -16,8 +15,6 @@
   "scripts": {
     "start": "node node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node node_modules/react-scripts/bin/react-scripts.js build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "node node_modules/react-scripts/bin/react-scripts.js test"
   },
   "eslintConfig": {
@@ -37,8 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
