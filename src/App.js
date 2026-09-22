@@ -1,31 +1,11 @@
 import "./style.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <header className="header-bg">
-        <section className="header-container">
-          <a href="/" className="logo-container">
-            <div className="icone-logo">
-              <img src="/assets/imagens/chef-hat.svg" alt="Chapéu de chef" />
-            </div>
-            <h1>Sabor de Bairro</h1>
-          </a>
-
-          <div className="menu-navegacao">
-            <nav>
-              <ul>
-                <li><a href="#cardapio">Cardapio</a></li>
-                <li><a href="#casa">A casa</a></li>
-                <li><a href="#visite">Visiste</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <a href="#visite" className="btn-peca-agora">Pedir agora</a>
-        </section>
-      </header>
-      
+      <Header />
       <main className="main-container">
         <section className="container1">
           <div className="container1-texto">
@@ -84,8 +64,8 @@ function App() {
                     <span>R$ 34</span>
                   </div>
                   <p>Pão artesanal, hambúrguer 180g, bacon, ovo, queijo e salada</p>
-                  <a href="#"
-                    target="_blank">Adicionar</a>
+                  <a href="https://wa.me/5579987654321?text=Olá!%20Quero%20pedir%201%20X-Tudo%20do%20Bairro%20por%20R%24%2034."
+                    target="_blank" rel="noopener noreferrer">Adicionar</a>
                 </div>
               </li>
 
@@ -100,8 +80,8 @@ function App() {
                     <span>R$ 21</span>
                   </div>
                   <p>Sorvete de baunilha, Ovomaltine e chantily na medida certa.</p>
-                  <a href="#"
-                    target="_blank">Adicionar</a>
+                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Shake%20de%20Ovomaltine%20por%20R%24%2021."
+                    target="_blank" rel="noopener noreferrer">Adicionar</a>
                 </div>
               </li>
 
@@ -116,8 +96,8 @@ function App() {
                     <span>R$ 19</span>
                   </div>
                   <p>Batatas crocantes com alecrim, sal parrilha e cheddar cremoso</p>
-                  <a href="#"
-                    target="_blank">Adicionar</a>
+                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Batata%20R%C3%BAstica%20por%20R%24%2019."
+                    target="_blank" rel="noopener noreferrer">Adicionar</a>
                 </div>
               </li>
 
@@ -132,8 +112,8 @@ function App() {
                     <span>R$ 28</span>
                   </div>
                   <p>Filé de frango grelhado, maionese da casa e picles crocante.</p>
-                  <a href="#"
-                    target="_blank">Adicionar</a>
+                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Sandu%C3%ADche%20de%20Frango%20por%20R%24%2028."
+                    target="_blank" rel="noopener noreferrer">Adicionar</a>
                 </div>
               </li>
             </ul>
@@ -206,27 +186,10 @@ function App() {
               <span className="telefone">(79) 98765-4321</span>
               <a href="#">Pedir pelo WhatsApp</a>
             </div>
-
           </div>
-
         </section>
       </main>
-      <footer className="footer-container">
-        <a href="/" className="logo-container">
-          <div className="icone-logo">
-            <img src="/assets/imagens/chef-hat.svg" alt="Chapéu de chef" />
-          </div>
-          <p>Sabor de Bairro</p>
-        </a>
-
-        <p>© 2026 Sabor de Bairro. Feito com carinho na chapa.</p>
-
-        <nav className="social-medias">
-          <a href=""><img src="/assets/imagens/whatsapp-svgrepo-com.svg" alt="whatsapp"/></a>
-          <a href=""><img src="/assets/imagens/instagram-svgrepo-com.svg" alt="instagram"/></a>
-          <a href=""><img src="/assets/imagens/tiktok-fill-svgrepo-com.svg" alt="tiktok"/></a>
-        </nav>
-      </footer>
+      <Footer />
     </>
   );
 }
