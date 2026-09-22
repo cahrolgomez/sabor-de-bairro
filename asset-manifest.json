@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sabor-de-bairro/static/css/main.f8a367b2.css",
+    "main.js": "/sabor-de-bairro/static/js/main.27a2e986.js",
+    "static/media/Oswald-Bold.ttf": "/sabor-de-bairro/static/media/Oswald-Bold.35f5cd6d606607dd9214.ttf",
+    "static/media/Oswald-Light.ttf": "/sabor-de-bairro/static/media/Oswald-Light.115d7e578f716021d698.ttf",
+    "static/media/Oswald-Regular.ttf": "/sabor-de-bairro/static/media/Oswald-Regular.2382cc8b7db04633e754.ttf",
+    "index.html": "/sabor-de-bairro/index.html",
+    "main.f8a367b2.css.map": "/sabor-de-bairro/static/css/main.f8a367b2.css.map",
+    "main.27a2e986.js.map": "/sabor-de-bairro/static/js/main.27a2e986.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8a367b2.css",
+    "static/js/main.27a2e986.js"
+  ]
+}
