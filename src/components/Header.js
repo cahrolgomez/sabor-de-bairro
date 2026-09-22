@@ -4,7 +4,7 @@ function Header() {
       <section className="header-container">
         <a href="/" className="logo-container">
           <div className="icone-logo">
-            <img src="/assets/imagens/chef-hat.svg" alt="Chapéu de chef" />
+            <img src={`${process.env.PUBLIC_URL}/assets/imagens/chef-hat.svg`} alt="Chapéu de chef" />
           </div>
           <h1>Sabor de Bairro</h1>
         </a>

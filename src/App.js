@@ -9,7 +9,7 @@ function App() {
       <main className="main-container">
         <section className="container1">
           <div className="container1-texto">
-            <span className="horario"><img src="/assets/imagens/circle.svg" alt="Círculo verde" /> Aberto das 10h às 23h</span>
+            <span className="horario"><img src={`${process.env.PUBLIC_URL}/assets/imagens/circle.svg`} alt="Círculo verde" /> Aberto das 10h às 23h</span>
             <h2>Sabor de bairro, <br></br> <span>feito na hora.</span></h2>
             <p>Lanches artesanais, shakes gelados e aquela comida caseira que só a lanchonete da esquina tem.</p>
             <div className="btn-infos">
@@ -19,15 +19,15 @@ function App() {
 
             <div className="sobre">
               <div>
-                <img src="/assets/imagens/star-svgrepo-com.svg" alt="estrela"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/imagens/star-svgrepo-com.svg`} alt="estrela"/>
                 <span>4,9 estrelas</span>
               </div>
               <div>
-                <img src="/assets/imagens/cutlery-svgrepo-com.svg" alt="talheres"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/imagens/cutlery-svgrepo-com.svg`} alt="talheres"/>
                 <span>+50 mil pedidos</span>
               </div>
               <div>
-                <img src="/assets/imagens/coffee-svgrepo-com.svg" alt="cafe"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/imagens/coffee-svgrepo-com.svg`} alt="cafe"/>
                 <span>Desde 2014</span>
               </div>
             </div>
@@ -35,7 +35,7 @@ function App() {
 
           <div className="container1-imagem">
             <figure>
-              <img src="/assets/imagens/combo1.jpg" alt="Imagem de um lanche"/>
+              <img src={`${process.env.PUBLIC_URL}/assets/imagens/combo1.jpg`} alt="Imagem de um lanche"/>
             </figure>
             <div className="box-destaque">
               <p className="p-destaque">Combo do dia</p>
@@ -55,7 +55,7 @@ function App() {
             <ul>
               <li>
                 <figure>
-                  <img src="/assets/imagens/x-tudo.jpg" alt="x-tudo hamburguer"/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/imagens/x-tudo.jpg`} alt="x-tudo hamburguer"/>
                   <span>Mais pedido</span>
                 </figure>
                 <div className="cardapio-descricao">
@@ -71,7 +71,7 @@ function App() {
 
               <li>
                 <figure>
-                  <img src="/assets/imagens/shake-ovomaltine.png" alt="shake"/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/imagens/shake-ovomaltine.png`} alt="shake"/>
                   <span>Gelado</span>
                 </figure>
                 <div className="cardapio-descricao">
@@ -87,7 +87,7 @@ function App() {
 
               <li>
                 <figure>
-                  <img src="/assets/imagens/batata.jpg" alt="batata"/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/imagens/batata.jpg`} alt="batata"/>
                   <span>Para dividir</span>
                 </figure>
                 <div className="cardapio-descricao">
@@ -103,7 +103,7 @@ function App() {
 
               <li>
                 <figure>
-                  <img src="/assets/imagens/sanduiche-frango.jpg" alt="sanduiche de frango"/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/imagens/sanduiche-frango.jpg`} alt="sanduiche de frango"/>
                   <span>Classico</span>
                 </figure>
                 <div className="cardapio-descricao">
@@ -122,7 +122,7 @@ function App() {
 
         <section className="casa-container" id="casa">
           <figure>
-            <img src="/assets/imagens/foto-casa.jpg" alt="lanchonete"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/imagens/foto-casa.jpg`} alt="lanchonete"/>
           </figure>
           <div className="casa-descricao">
             <span>A casa</span>
@@ -130,17 +130,17 @@ function App() {
             <p>A lanchonete do Bairro começou com uma chapa pequena e muita vontade de fazer comida boa. Hoje a gente segue com o mesmo jeitinho: ingredientes frescos, pão na hora e atendimento que abraça.</p>
             <ul className="lista-casa">
               <li>
-                <span><img src="/assets/imagens/yes-svgrepo-com.svg" alt="yes"/></span>
+                <span><img src={`${process.env.PUBLIC_URL}/assets/imagens/yes-svgrepo-com.svg`} alt="yes"/></span>
               <p>Ingredientes selecionados todo dia</p>
               </li>
 
               <li>
-                <span><img src="/assets/imagens/yes-svgrepo-com.svg" alt="yes"/></span>
+                <span><img src={`${process.env.PUBLIC_URL}/assets/imagens/yes-svgrepo-com.svg`} alt="yes"/></span>
               <p>Pão artesanal assado na casa</p>
               </li>
 
               <li>
-                <span><img src="/assets/imagens/yes-svgrepo-com.svg" alt="yes"/></span>
+                <span><img src={`${process.env.PUBLIC_URL}/assets/imagens/yes-svgrepo-com.svg`} alt="yes"/></span>
               <p>Ambiente familiar e descontraído</p>
               </li>
             </ul>
@@ -153,7 +153,7 @@ function App() {
 
           <div className="visite-infos">
             <div className="horario-funcionamento">
-              <span className="bg-img-infos"><img src="/assets/imagens/clock-circle-svgrepo-com.svg" alt="relogio"/></span>
+              <span className="bg-img-infos"><img src={`${process.env.PUBLIC_URL}/assets/imagens/clock-circle-svgrepo-com.svg`} alt="relogio"/></span>
               <h3>Horários</h3>
               <div className="horarios">
                 <p>Segunda a sexta</p>
@@ -171,7 +171,7 @@ function App() {
 
               
             <div className="endereco">
-              <span className="bg-img-infos"><img src="/assets/imagens/location-pin-svgrepo-com.svg" alt="local"/></span>
+              <span className="bg-img-infos"><img src={`${process.env.PUBLIC_URL}/assets/imagens/location-pin-svgrepo-com.svg`} alt="local"/></span>
               <h3>Endereço</h3>
               <p>Rua das Laranjeiras, 456, Centro</p>
               <p>Aracaju - Sergipe</p>
@@ -179,7 +179,7 @@ function App() {
             </div>
 
             <div className="peca-wpp">
-              <span className="bg-img-infos"><img src="/assets/imagens/phone-svgrepo-com.svg" alt="telefone"/></span>
+              <span className="bg-img-infos"><img src={`${process.env.PUBLIC_URL}/assets/imagens/phone-svgrepo-com.svg`} alt="telefone"/></span>
               <h3>Peça agora</h3>
               <p>Ligue ou mande mensagem pelo WhatsApp. Entregamos em até 40 min.</p>
 
