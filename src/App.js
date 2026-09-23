@@ -65,7 +65,7 @@ function App() {
                   </div>
                   <p>Pão artesanal, hambúrguer 180g, bacon, ovo, queijo e salada</p>
                   <a href="https://wa.me/5579987654321?text=Olá!%20Quero%20pedir%201%20X-Tudo%20do%20Bairro%20por%20R%24%2034."
-                    target="_blank">Pedir</a>
+                    target="_blank" rel="noreferrer">Pedir</a>
                 </div>
               </li>
 
@@ -81,7 +81,7 @@ function App() {
                   </div>
                   <p>Sorvete de baunilha, Ovomaltine e chantily na medida certa.</p>
                   <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Shake%20de%20Ovomaltine%20por%20R%24%2021."
-                    target="_blank">Pedir</a>
+                    target="_blank" rel="noreferrer">Pedir</a>
                 </div>
               </li>
 
@@ -97,7 +97,7 @@ function App() {
                   </div>
                   <p>Batatas crocantes com alecrim, sal parrilha e cheddar cremoso</p>
                   <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Batata%20R%C3%BAstica%20por%20R%24%2019."
-                    target="_blank">Pedir</a>
+                    target="_blank" rel="noreferrer">Pedir</a>
                 </div>
               </li>
 
@@ -113,7 +113,7 @@ function App() {
                   </div>
                   <p>Filé de frango grelhado, maionese da casa e picles crocante.</p>
                   <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Sandu%C3%ADche%20de%20Frango%20por%20R%24%2028."
-                    target="_blank">Pedir</a>
+                    target="_blank" rel="noreferrer">Pedir</a>
                 </div>
               </li>
             </ul>
