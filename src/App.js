@@ -184,7 +184,9 @@ function App() {
               <p>Ligue ou mande mensagem pelo WhatsApp. Entregamos em até 40 min.</p>
 
               <span className="telefone">(79) 98765-4321</span>
-              <a href="#">Pedir pelo WhatsApp</a>
+              <a href="https://wa.me/5579987654321?text=Olá%21%20Gostaria%20de%20fazer%20um%20pedido."
+                target="_blank"
+                rel="noopener noreferrer">Pedir pelo WhatsApp</a>
             </div>
           </div>
         </section>
