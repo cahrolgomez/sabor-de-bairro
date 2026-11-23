@@ -13,6 +13,7 @@ function Header() {
           <nav>
             <ul>
               <li><a href="#cardapio">Cardápio</a></li>
+              <li><a href="/cardapio-completo">Cardápio Completo</a></li>
               <li><a href="#casa">A casa</a></li>
               <li><a href="#visite">Visite</a></li>
             </ul>

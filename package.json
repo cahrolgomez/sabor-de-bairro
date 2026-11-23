@@ -2,6 +2,7 @@
   "name": "sabor-do-bairro",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://127.0.0.1:3001",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -9,10 +10,14 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-icons": "^5.7.0",
+    "react-router": "^7.18.5",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "db:atualizar": "powershell.exe -NoProfile -Command \"& 'C:/Program Files/MySQL/MySQL Server 8.4/bin/mysql.exe' --host=127.0.0.1 --user=root --password --default-character-set=utf8mb4 '--execute=source server/cardapio.sql'; exit $LASTEXITCODE\"",
+    "api": "npm --prefix server start",
     "start": "node node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node node_modules/react-scripts/bin/react-scripts.js test"

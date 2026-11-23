@@ -1,0 +1,12 @@
+{
+  "name": "sabor-do-bairro-server",
+  "private": true,
+  "scripts": {
+    "start": "node --env-file=.env index.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2",
+    "mysql2": "^3.15.3",
+    "sabor-do-bairro": "file:.."
+  }
+}

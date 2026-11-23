@@ -1,8 +1,11 @@
 import "./style.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CardProduto from "./components/CardProduto";
+import { Link, Route, Routes } from "react-router";
+import CardapioCompleto from "./pages/CardapioCompleto";
 
-function App() {
+function Home() {
   return (
     <>
       <Header />
@@ -13,7 +16,7 @@ function App() {
             <h2>Sabor de bairro, <br></br> <span>feito na hora.</span></h2>
             <p>Lanches artesanais, shakes gelados e aquela comida caseira que só a lanchonete da esquina tem.</p>
             <div className="btn-infos">
-              <a href="#cardapio" id="btn-cardapio">Ver cardápio</a>
+              <a href="#cardapio" className="btn-cardapio">Ver cardápio</a>
               <a href="#visite" id="btn-local">Como chegar</a>
             </div>
 
@@ -53,71 +56,42 @@ function App() {
           </div>
           <div className="lista-container">
             <ul>
-              <li>
-                <figure>
-                  <img src="/assets/imagens/x-tudo.jpg" alt="x-tudo hamburguer"/>
-                  <span>Mais pedido</span>
-                </figure>
-                <div className="cardapio-descricao">
-                  <div className="nome-preco">
-                    <h3>X-Tudo do Bairro</h3>
-                    <span>R$ 34</span>
-                  </div>
-                  <p>Pão artesanal, hambúrguer 180g, bacon, ovo, queijo e salada</p>
-                  <a href="https://wa.me/5579987654321?text=Olá!%20Quero%20pedir%201%20X-Tudo%20do%20Bairro%20por%20R%24%2034."
-                    target="_blank" rel="noreferrer">Pedir</a>
-                </div>
-              </li>
+              <CardProduto
+                nome="X-Tudo do Bairro"
+                descricao="Pão artesanal, hambúrguer 180g, bacon, ovo, queijo e salada"
+                preco="R$ 34"
+                imagem="x-tudo.jpg"
+                selo="Mais pedido"
+              />
 
-              <li>
-                <figure>
-                  <img src="/assets/imagens/shake-ovomaltine.png" alt="shake"/>
-                  <span>Gelado</span>
-                </figure>
-                <div className="cardapio-descricao">
-                  <div className="nome-preco">
-                    <h3>Shake de Ovomaltine</h3>
-                    <span>R$ 21</span>
-                  </div>
-                  <p>Sorvete de baunilha, Ovomaltine e chantily na medida certa.</p>
-                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Shake%20de%20Ovomaltine%20por%20R%24%2021."
-                    target="_blank" rel="noreferrer">Pedir</a>
-                </div>
-              </li>
+              <CardProduto
+                nome="Shake de Ovomaltine"
+                descricao="Sorvete de baunilha, Ovomaltine e chantily na medida certa."
+                preco="R$ 21"
+                imagem="shake-ovomaltine.png"
+                selo="Gelado"
+              />
 
-              <li>
-                <figure>
-                  <img src="/assets/imagens/batata.jpg" alt="batata"/>
-                  <span>Para dividir</span>
-                </figure>
-                <div className="cardapio-descricao">
-                  <div className="nome-preco">
-                    <h3>Batata Rústica</h3>
-                    <span>R$ 19</span>
-                  </div>
-                  <p>Batatas crocantes com alecrim, sal parrilha e cheddar cremoso</p>
-                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Batata%20R%C3%BAstica%20por%20R%24%2019."
-                    target="_blank" rel="noreferrer">Pedir</a>
-                </div>
-              </li>
+              <CardProduto
+                nome="Batata Rústica"
+                descricao="Batatas crocantes com alecrim, sal parrilha e cheddar cremoso"
+                preco="R$ 19"
+                imagem="batata.jpg"
+                selo="Para dividir"
+              />
 
-              <li>
-                <figure>
-                  <img src="/assets/imagens/sanduiche-frango.jpg" alt="sanduiche de frango"/>
-                  <span>Classico</span>
-                </figure>
-                <div className="cardapio-descricao">
-                  <div className="nome-preco">
-                    <h3>Sanduíche de Frango</h3>
-                    <span>R$ 28</span>
-                  </div>
-                  <p>Filé de frango grelhado, maionese da casa e picles crocante.</p>
-                  <a href="https://wa.me/5579987654321?text=Ol%C3%A1%21%20Quero%20pedir%201%20Sandu%C3%ADche%20de%20Frango%20por%20R%24%2028."
-                    target="_blank" rel="noreferrer">Pedir</a>
-                </div>
-              </li>
+              <CardProduto
+                nome="Sanduíche de Frango"
+                descricao="Pão artesanal, filé de frango empanado, queijo, alface, tomate e maionese temperada."
+                preco="R$ 30"
+                imagem="sanduiche-frango.jpg"
+                selo="Classico"
+              />
             </ul>
           </div>
+          <Link to="/cardapio-completo" className="btn-cardapio cardapio-completo">
+            Ver cardápio completo
+          </Link>
         </section>
 
         <section className="casa-container" id="casa">
@@ -193,6 +167,15 @@ function App() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cardapio-completo" element={<CardapioCompleto />} />
+    </Routes>
   );
 }
 
