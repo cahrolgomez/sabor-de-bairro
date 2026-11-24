@@ -19,7 +19,7 @@ app.get("/api/cardapio", async (requisicao, resposta) => {
     `);
 
     const categorias = new Map();
-    for (const { categoria: categoriaCadastrada, preco, ...produto } of produtos) {
+    for (const { categoria, preco, ...produto } of produtos) {
       if (!categorias.has(categoria)) categorias.set(categoria, []);
       categorias.get(categoria).push({ ...produto, preco: moeda.format(Number(preco)) });
     }
