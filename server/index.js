@@ -10,7 +10,7 @@ const banco = mysql.createPool({
 });
 const moeda = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 
-app.get("/api/cardapio", async (req, res) => {
+app.get("/api/cardapio", async (requisicao, resposta) => {
   try {
     const [produtos] = await banco.query(`
       SELECT id, categoria, nome, descricao, preco, imagem
@@ -20,15 +20,14 @@ app.get("/api/cardapio", async (req, res) => {
 
     const categorias = new Map();
     for (const { categoria: categoriaCadastrada, preco, ...produto } of produtos) {
-      const categoria = categoriaCadastrada.replace(/^(?:\p{Extended_Pictographic}\uFE0F?\s*)+/u, "");
       if (!categorias.has(categoria)) categorias.set(categoria, []);
       categorias.get(categoria).push({ ...produto, preco: moeda.format(Number(preco)) });
     }
 
-    res.json(Array.from(categorias, ([categoria, itens]) => ({ categoria, itens })));
+    resposta.json(Array.from(categorias, ([categoria, itens]) => ({ categoria, itens })));
   } catch (erro) {
     console.error(erro.message);
-    res.status(503).json({ mensagem: "Não foi possível carregar o cardápio." });
+    resposta.status(503).json({ mensagem: "Não foi possível carregar o cardápio." });
   }
 });
 
