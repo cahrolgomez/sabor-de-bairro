@@ -58,7 +58,14 @@ export default function CardapioCompleto() {
             <h2>{categoria}</h2>
             <ul>
               {itens.map((item) => (
-                <CardProduto key={item.id} {...item} />
+                <CardProduto
+                  key={item.id}
+                  nome={item.nome}
+                  descricao={item.descricao}
+                  preco={item.preco}
+                  imagem={item.imagem}
+                  selo={item.selo}
+                />
               ))}
             </ul>
           </section>

@@ -4,13 +4,16 @@ const mysql = require("mysql2/promise");
 const app = express();
 const banco = mysql.createPool({
   host: "127.0.0.1",
-  user: process.env.DB_USER || "root",
+  user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: "sabor_do_bairro",
 });
-const moeda = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+const moeda = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
 
-app.get("/api/cardapio", async (requisicao, resposta) => {
+app.get("/api/cardapio", async (_requisicao, resposta) => {
   try {
     const [produtos] = await banco.query(`
       SELECT id, categoria, nome, descricao, preco, imagem
@@ -18,13 +21,27 @@ app.get("/api/cardapio", async (requisicao, resposta) => {
       ORDER BY ordem_categoria, ordem_produto, id
     `);
 
-    const categorias = new Map();
-    for (const { categoria, preco, ...produto } of produtos) {
-      if (!categorias.has(categoria)) categorias.set(categoria, []);
-      categorias.get(categoria).push({ ...produto, preco: moeda.format(Number(preco)) });
+    const cardapio = [];
+
+    for (const produto of produtos) {
+      const categoria = produto.categoria;
+      let grupo = cardapio.find((grupo) => grupo.categoria === categoria);
+
+      if (!grupo) {
+        grupo = { categoria, itens: [] };
+        cardapio.push(grupo);
+      }
+
+      grupo.itens.push({
+        id: produto.id,
+        nome: produto.nome,
+        descricao: produto.descricao,
+        imagem: produto.imagem,
+        preco: moeda.format(Number(produto.preco)),
+      });
     }
 
-    resposta.json(Array.from(categorias, ([categoria, itens]) => ({ categoria, itens })));
+    resposta.json(cardapio);
   } catch (erro) {
     console.error(erro.message);
     resposta.status(503).json({ mensagem: "Não foi possível carregar o cardápio." });
