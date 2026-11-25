@@ -1,14 +1,20 @@
 export default function CardProduto({ nome, descricao, preco, imagem, selo }) {
   const mensagem = encodeURIComponent(`Olá! Quero pedir 1 ${nome} por ${preco}.`);
 
+  let elementoSelo;
+
+  if (selo) {
+    elementoSelo = <span>{selo}</span>;
+  } else {
+    elementoSelo = null;
+  }
+
   return (
     <li>
-      {imagem && (
-        <figure>
-          <img src={`/assets/imagens/${imagem}`} alt={nome} />
-          {selo && <span>{selo}</span>}
-        </figure>
-      )}
+      <figure>
+        <img src={`/assets/imagens/${imagem}`} alt={nome} />
+        {elementoSelo}
+      </figure>
       <div className="cardapio-descricao">
         <div className="nome-preco">
           <h3>{nome}</h3>

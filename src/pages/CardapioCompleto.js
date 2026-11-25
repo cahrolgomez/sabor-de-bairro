@@ -7,11 +7,11 @@ import Footer from "../components/Footer";
 
 export default function CardapioCompleto() {
   const [cardapio, setCardapio] = useState(null);
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState("todas");
 
   let cardapioFiltrado = cardapio || [];
 
-  if (categoriaSelecionada !== "") {
+  if (categoriaSelecionada !== "todas") {
     cardapioFiltrado = cardapioFiltrado.filter(
       (grupo) => grupo.categoria === categoriaSelecionada
     );
@@ -47,13 +47,13 @@ export default function CardapioCompleto() {
               <FaSearch/>
               <select id="categoria-cardapio" value={categoriaSelecionada}
                 onChange={(evento) => setCategoriaSelecionada(evento.target.value)}>
-                <option value="">Todas as categorias</option>
+                <option value="todas">Todas as categorias</option>
                 {cardapio?.map(({ categoria }) => (
                   <option key={categoria} value={categoria}>{categoria}</option>
                 ))}
               </select>
             </div>
-            <button type="button" onClick={() => setCategoriaSelecionada("")}>Mostrar tudo</button>
+            <button type="button" onClick={() => setCategoriaSelecionada("todas")}>Mostrar tudo</button>
           </div>
         </div>
 
