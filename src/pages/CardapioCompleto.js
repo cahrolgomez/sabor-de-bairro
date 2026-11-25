@@ -9,9 +9,13 @@ export default function CardapioCompleto() {
   const [cardapio, setCardapio] = useState(null);
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
 
-  const cardapioFiltrado = (cardapio || []).filter(
-    (grupo) => categoriaSelecionada === "" || grupo.categoria === categoriaSelecionada
-  );
+  let cardapioFiltrado = cardapio || [];
+
+  if (categoriaSelecionada !== "") {
+    cardapioFiltrado = cardapioFiltrado.filter(
+      (grupo) => grupo.categoria === categoriaSelecionada
+    );
+  }
 
   useEffect(() => {
     async function carregarCardapio() {
